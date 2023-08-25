@@ -1,8 +1,8 @@
 import 'dart:io';
 
 class Contact {
-  String name;
-  String phoneNumber;
+  String? name;
+  String? phoneNumber;
   Contact(this.name, this.phoneNumber) {}
 }
 
@@ -55,7 +55,7 @@ void main(List<String> args) {
 
       case 2:
         print('Nhap ten lien he de xoa');
-        var name = stdin.readByteSync();
+        var name = stdin.readLineSync();
         addressBook.removeContact(name!);
         print('Lien he da duoc xoa');
         break;
